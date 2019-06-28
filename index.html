@@ -36,7 +36,9 @@
     }
 
     function displayMatches() {
-      console.log(this.value);
+      // console.log(this.value);
+      const matchArray = findMatches(this.value, cities);
+      console.log(matchArray);
       
     }
 
@@ -44,6 +46,8 @@
     const suggestions = document.querySelector(".suggestions");
 
     searchInput.addEventListener("change", displayMatches);
+    searchInput.addEventListener("keyup", displayMatches);
+
 
   </script>
 
